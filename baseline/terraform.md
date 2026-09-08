@@ -28,6 +28,16 @@
 - An emergency CLI change is allowed, but must land in code within 24h or be
   reverted.
 
+## Bootstrap — the only hand-made resources
+The state backend (and the identity that runs the first apply) cannot be
+created by a pipeline that does not yet exist. This is the **entire**
+legitimate hand-made set: create it once, tag it, give it its registry row,
+and `terraform import` it in the repository's first PR so that from commit
+one, everything that exists is in code. Everything after bootstrap —
+including new pipelines, policies and dashboards — arrives as code through
+the pipeline; a hard platform limit with no code path is recorded as an
+exception in the registry, never silently accepted.
+
 ## Code rules
 - `required_version` and provider versions **pinned**; upgrades are their own
   PR with the plan attached.

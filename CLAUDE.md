@@ -29,6 +29,26 @@ absence cost real time.
   time — never a second source of truth. If a task seems to need a secret
   pasted somewhere, the task is wrong, not the rule.
 
+## Everything is code — no manual actions
+- You never create, change or delete infrastructure, pipelines, policies,
+  branch rules, dashboards or configuration by hand (portal, console,
+  ad-hoc CLI). You author it as code — Terraform, pipeline definitions,
+  config files — and ship it through the gated pipeline like any other
+  change. A resource that exists but is not in code does not exist
+  legitimately; the drift check will treat it as an incident.
+- Exactly two exceptions, both recorded:
+  1. **Bootstrap** — the minimal set that must exist before code can run:
+     the Terraform state backend (storage + lock) and the identity that
+     performs the first apply. Created once, tagged, registered, and
+     `terraform import`-ed into code in the first PR.
+  2. **Hard platform limits** — a setting with no API or code path (they
+     exist; a repo's social-preview image is one). The manual action gets
+     a registry entry naming what was done, why no code path exists, and
+     who did it; re-check for a code path at the quarterly review.
+- An emergency manual change to stop active bleeding is allowed — it lands
+  in code within 24h or is reverted. The weekly drift check is the safety
+  net, not the excuse.
+
 ## Delivery loop — never deviate
 1. Work on a branch named `type/TICKET-slug` from the environment branch.
 2. Open a PR; the AI gate reviews it (blocking). Fix findings or have a human

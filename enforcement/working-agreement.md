@@ -10,5 +10,8 @@
   where a decision is genuinely human.
 - **Assets registered at birth**; **incidents become written lessons with
   evidence**; the second engineer never pays for the first one's education.
+- **Everything is code** — no manual resource, pipeline or policy changes
+  by humans or agents; bootstrap and recorded hard-platform-limit
+  exceptions only, and emergency changes land in code within 24h.
 - Secrets have one home; nothing web-facing ships anonymous; verify with an
   unauthenticated request before sharing a URL.
