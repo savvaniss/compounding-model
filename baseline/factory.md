@@ -16,15 +16,17 @@ flowchart LR
   DEV[Developer's AI agent<br/>per-person token] -->|ask| MCP[Tool server MCP]
   DEV -->|act| MCP
   MCP --> RB[runbooks & lessons]
+  MCP --> KW[wiki of record & tickets<br/>live search · read · comment]
   MCP --> TE[telemetry & env status]
   MCP --> PI[pipelines: deliver, deploy]
-  MCP --> TK[PRs & tickets]
+  MCP --> TK[PRs]
 ```
 
 - **Questions** — "how do we deploy?", "is anyone on the system?", "what
-  went wrong last time?" — are answered from the runbook library, the
-  telemetry tables and the lessons entries, *in the agent's context*, not
-  from tribal memory.
+  went wrong last time?", "what did we decide about X?" — are answered
+  from the runbook library, the telemetry tables, the lessons entries,
+  the wiki of record and the ticket history, *in the agent's context*,
+  not from tribal memory (baseline/knowledge-work-integration.md).
 - **Actions** — deliver a change, queue a deploy, comment the ticket — run
   as tools, so every guard fires and every call lands attributed to the
   person driving.

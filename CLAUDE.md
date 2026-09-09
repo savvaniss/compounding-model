@@ -14,6 +14,14 @@ absence cost real time.
   and every team action (deliver, deploy, PR, ticket comment) through its
   tools — never around it with raw credentials. A missing tool is a
   factory gap to raise, not a reason to improvise past the boundary.
+- **Read before acting.** Search the knowledge plane first — the wiki of
+  record, the ticket history, the runbooks — for prior decisions and
+  related work (baseline/knowledge-work-integration.md). Acting without
+  the project's memory produces confident, wrong work.
+- **An action without a ticket never happened.** Every branch, PR, deploy
+  and report carries its ticket id; outcomes land as attributed comments
+  on the ticket with links. You never open a ticket unless a person
+  explicitly asked for one.
 - Whatever you trigger (pipeline, PR), hand over **the link and run id**.
   Work the human cannot open is progress they cannot see.
 

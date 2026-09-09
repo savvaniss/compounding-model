@@ -20,7 +20,7 @@ those decisions belong to the humans.
 2. **Set the repo-local git identity** before any commit, and verify with
    `git log --format='%an %ae'` before the first push — the global config
    may carry an identity that must not appear in this history.
-3. **Present the 14 [decisions](decisions/)** to the team as a one-page
+3. **Present the 15 [decisions](decisions/)** to the team as a one-page
    summary (one line per ADR: the default and what adopting it means).
    🧑 The team accepts or disagrees per ADR; draft a superseding ADR for
    every disagreement *today* — silent divergence is how blueprints die.

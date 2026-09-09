@@ -75,7 +75,7 @@ flowchart LR
 | # | utility | scope (what it does) | out of scope | size |
 |---|---|---|---|---|
 | 1 | **AI merge gate** | deterministic checks (ticket, branch, secret scan) + full-diff LLM review; PR thread + commit status; override on the record, scoped per push; run telemetry | auto-fixing code; replacing human review of design | M |
-| 2 | **Tool server (MCP)** | team ops as tools: deliver, deploy, PR, ticket comment, runbook fetch, telemetry query; per-person token auth; guard rules from `enforcement/` | being a general chat bot; storing secrets | M–L |
+| 2 | **Tool server (MCP)** | team ops as tools: deliver, deploy, PR, ticket search/read/comment, wiki-of-record search/read, runbook fetch, telemetry query — one federated search across all of it; per-person token auth; guard rules from `enforcement/` | being a general chat bot; storing secrets; mirroring the wiki | M–L |
 | 3 | **Change-delivery orchestrator** | one call: build → layered build → deploy → migrate → verify → report on ticket; refuses production (queue-only) | approving production; schema design | M |
 | 4 | **Pipeline guard library** | tag-exists, build-reason, approval-check-present, promotion-ancestry checks, shared by all queuing paths | replacing branch policies | S |
 | 5 | **Console / hub** | env status + sleep/wake, delivery metrics, cost view (fold `MC_*`), people view, usage panel (busy/quiet/can't-tell), runbook browser, assistant | BI platform; long-term warehouse | L |

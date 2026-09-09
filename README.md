@@ -66,7 +66,7 @@ boundaries:
 flowchart LR
   M{{"THE COMPOUNDING MODEL<br/>six questions · three stages<br/>stage = lowest provable answer"}}
   M -->|guides| SOL["Business → solution<br/><i>solution/</i>"]
-  M -->|guides| ARC["Architecture & 14 seeded decisions<br/><i>architecture/ · decisions/</i>"]
+  M -->|guides| ARC["Architecture & 15 seeded decisions<br/><i>architecture/ · decisions/</i>"]
   M -->|guides| FND["Cloud foundation · IaC · identity<br/><i>baseline/</i>"]
   M -->|guides| OPS["Operations & the monitoring map<br/><i>operations/</i>"]
   M -->|enforces| DEL["Delivery & quality gates<br/><i>baseline/devops · enforcement/</i>"]
@@ -78,13 +78,14 @@ flowchart LR
 | Category | What the model demands | Where |
 |---|---|---|
 | Business → solution | every build traces to a named outcome with a falsifiable value hypothesis; NFR targets agreed before design; effects measured after shipping | [solution/](solution/) |
-| Decisions | start from **14 pre-accepted defaults** — cloud, IaC, identity, network, runtime, data, secrets, delivery, observability, AI access, APIs, knowledge, cost, DevSecOps; disagree by superseding, never by drifting | [decisions/](decisions/) |
+| Decisions | start from **15 pre-accepted defaults** — cloud, IaC, identity, network, runtime, data, secrets, delivery, observability, AI access, APIs, docs-as-code, cost, DevSecOps, knowledge & work integration; disagree by superseding, never by drifting | [decisions/](decisions/) |
 | Architecture | quality attributes drive structure; boundaries follow the domain; failure is designed per dependency; structure is enforced by fitness functions in CI — and the factory has its own hub-spoke infrastructure | [architecture/](architecture/) |
 | Cloud foundation & IaC | a governed hierarchy with one isolation boundary per workload+environment; policy as code; Terraform on verified modules; pipeline-only state; drift is an incident — **with Azure · AWS · GCP mappings** | [baseline/cloud-foundation.md](baseline/cloud-foundation.md), [baseline/terraform.md](baseline/terraform.md) |
 | Identity | groups + PIM for humans, federated identities for workloads, **agents act as the person driving them** — anonymous writes are refused | [baseline/identity.md](baseline/identity.md) |
 | Delivery & quality | PR-only through the AI merge gate; build once, promote the artifact; guards refuse unsafe deploys; a human lands production; done means verified on the running system | [baseline/devops.md](baseline/devops.md), [baseline/quality.md](baseline/quality.md), [enforcement/](enforcement/) |
 | Security | the scan lane rides the delivery pipeline (secrets/SAST/SCA/IaC/image/SBOM/signing/DAST); findings carry owners, SLAs and expiring suppressions; posture, SIEM and rotation run forever after | [security/](security/) |
 | AI platform & factory | one model gateway with isolated quota; every call attributed and priced; output judged with honest "can't grade"; AI assets are code shipped through their own gates; every agent connects through **one MCP socket** for every question and action | [baseline/ai-standards.md](baseline/ai-standards.md), [baseline/factory.md](baseline/factory.md) |
+| Knowledge & work | the wiki of record and the work tracker are **live tools**: federated search, attributed comments; **an action without a ticket never happened**; agents never open tickets unasked | [baseline/knowledge-work-integration.md](baseline/knowledge-work-integration.md) |
 | Operations & monitoring | SLOs with error budgets; incidents become lessons the AI serves back; seven monitoring altitudes, each with an owner; **failed ≠ empty** | [operations/](operations/) |
 | Evidence & people | champions with mandated time; every stage claim proven by an artifact and the mechanism producing it | [evidence/](evidence/), [templates/](templates/) |
 

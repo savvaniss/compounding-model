@@ -9,7 +9,7 @@ pull request instead of being retrofitted under a moving train. Security, operat
 lanes from day one — not phases bolted on at the end.
 
 ## Day 0 — decide & govern
-Adopt the [decision baseline](decisions/) — fourteen pre-accepted ADRs;
+Adopt the [decision baseline](decisions/) — fifteen pre-accepted ADRs;
 disagreements become superseding ADRs now, not drift later. Repositories,
 branch policies, identity (groups + PIM, never individuals; per-person
 tokens for agents), secrets policy (one home: the vault, everything

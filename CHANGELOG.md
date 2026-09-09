@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.2.0 — 2026-09-09
+
+- **Knowledge & work integration** (baseline/knowledge-work-integration.md
+  + ADR-015): the wiki of record and the work tracker are live tools on
+  the one MCP socket — federated search, attributed comments, read-before-
+  acting as contract; **an action without a ticket never happened**, and
+  agents never open tickets unasked. Wired through the factory connection
+  pattern, utility #2, the agent contract and the README.
+
 ## 1.1.0 — 2026-09-09
 
 The agent-first release.

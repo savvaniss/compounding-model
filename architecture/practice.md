@@ -89,7 +89,7 @@ Any decision that binds future work gets an ADR
 (../templates/adr-template.md): context, options, decision, consequences,
 review date — gated like code and **linked from the code it constrains**.
 An undocumented architecture decision is a future incident with extra
-steps. Do not start from zero: [decisions/](../decisions/) seeds fourteen
+steps. Do not start from zero: [decisions/](../decisions/) seeds fifteen
 pre-accepted baseline ADRs, one per category; disagreement is a superseding
 ADR with your context, never silent drift.
 
