@@ -105,30 +105,32 @@ You don't work through it — your agent does. What you watch happen:
 
 1. **It assesses you**: the agent runs the [AI assessment](assessment/ai-assessment-prompt.md)
    against your real repos and pipelines — the verdict names your weakest links.
-2. **It stands up day one**: hand it the [quick start](quick-start.md); it builds
-   the rails and stops only at human decision points.
-3. **You decide**: the agent presents the [decision baseline](decisions/);
-   your disagreements become superseding ADRs, today.
-4. **It builds the factory**: from
+2. **It stands up day one** ([quick start](quick-start.md), roadmap phase 0):
+   the rails, the secrets policy, the registry — and it presents the
+   [16 seeded decisions](decisions/), where **you decide**: disagreements
+   become superseding ADRs the same day, and the external clocks (boundary
+   vending, consents, quotas) start ticking.
+3. **It builds the factory** (phases 1–2): from
    [architecture/factory-infrastructure.md](architecture/factory-infrastructure.md)
-   the agent provisions the factory's own spoke as IaC through the pipeline,
-   then builds the [thirteen utilities](architecture.md) in order — the
+   it provisions the factory's own spoke as IaC through the pipeline, then
+   builds the [thirteen utilities](architecture.md) in order — the
    enforcement spine (1–4) first — each landing as a gated PR, registered
    at birth. The factory is not installed; **it is built by the agent it
    will govern.**
-5. **It attaches delivery to value**: the [solution front-half](solution/) —
-   intake, business cases with falsifiable hypotheses, NFR targets, benefits
-   checks measured after shipping.
-6. **It builds on rails**: the [baseline](baseline/) standards, made real by
-   [enforcement](enforcement/) — a rule not enforced at a tool boundary is a
-   wish.
-7. **It operates**: the [monitoring map](operations/monitoring-map.md) and
+4. **It observes and operates** (phase 3): the
+   [monitoring map](operations/monitoring-map.md) and
    [SRE practice](operations/sre.md); incidents feed the lessons library it
    serves back to the team.
-8. **It keeps the evidence green** ([evidence/](evidence/)) so validation is
-   an export, not an archaeology project — the [roadmap](roadmap.md)
-   sequences all of this by dependency — the agent builds in hours; the
-   calendar belongs to decisions, lead times and evidence.
+5. **It attaches delivery to value** (phase 4): the
+   [solution front-half](solution/) — intake, business cases with
+   falsifiable hypotheses, NFR targets, benefits checks measured after
+   shipping.
+6. **It keeps the evidence green** ([evidence/](evidence/)) so validation is
+   an export, not an archaeology project.
+
+The [roadmap](roadmap.md) sequences all of this **by dependency, not
+calendar**: the agent builds in hours; the calendar belongs to human
+decisions, cloud lead times and the days evidence needs to accumulate.
 
 ## The invariants
 
