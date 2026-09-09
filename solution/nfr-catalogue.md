@@ -16,6 +16,7 @@ an enforcement point. Set the targets per project; never leave a row "TBD".
 | Cost | unit economics per transaction/user incl. AI tokens | cost ledger + cloud cost views | monthly FinOps review |
 | AI quality | groundedness/quality floor on sampled outputs; human escalation path | LLM-eval loop | quality review; feature flag rollback |
 | Auditability | every admin/approval/agent action attributed and queryable; evidence exportable on demand | audit log queries by actor | identity design (ADR-003) + quarterly access review |
+| Data freshness & quality | consumption datasets meet freshness SLOs; data tests pass before layer promotion | freshness monitors + pipeline test results | data pipeline gate (ADR-016) + SLO review |
 
 Every epic's DoR asks: which rows does this change? A feature that degrades a
 row needs an explicit, recorded decision — not a surprise in production.

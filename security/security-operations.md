@@ -40,7 +40,8 @@ severity SLAs owned by the service owner, not "the security person":
 
 Base images rebuilt on a weekly schedule (not only on release) so patch
 inheritance actually happens; cluster nodes on auto-upgrade with a
-maintenance window; dependency-update PRs (Renovate/Dependabot) merged on
+maintenance window; VM estates patched in rings via the cloud's patch
+manager under the same severity SLAs (ADR-005); dependency-update PRs (Renovate/Dependabot) merged on
 cadence, not hoarded.
 
 ## Secrets & key rotation

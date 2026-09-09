@@ -22,7 +22,7 @@ retrofitted under a moving train. Security, operations and the solution
 front-half are lanes from phase 0 — not phases bolted on at the end.
 
 ## Phase 0 — decide & govern *(one team hour + agent hours)*
-Adopt the [decision baseline](decisions/) — fifteen pre-accepted ADRs;
+Adopt the [decision baseline](decisions/) — sixteen pre-accepted ADRs;
 disagreements become superseding ADRs now, not drift later. Repositories,
 branch policies, identity (groups + PIM, never individuals; per-person
 tokens for agents), secrets policy (one home: the vault, everything
