@@ -32,5 +32,15 @@ flowchart LR
 | Stage 2 — Systematic | [systematic-checklist.md](systematic-checklist.md) | reviewed tables, mapped accounts, shared repo |
 | Stage 3 — Compounding | [compounding-checklist.md](compounding-checklist.md) | the running system, live — gate verdicts, ledgers, refusals |
 
+## What "validation" means here
+
+A validation is a skeptical review — by an external assessor, an internal
+audit function, or simply a leader who refuses claims without artifacts —
+that walks the applicable checklist and accepts only evidence produced by
+the running system. Its verdict is **time-boxed**: it certifies the cycle
+it examined, and expires unless re-proven on the cadence above. Any formal
+maturity framework your organization uses can sit on top of this — the six
+questions and their artifacts are the substrate such frameworks ask for.
+
 There is no stage above Compounding to chase: past it, the work is keeping
 the six answers true as the team, the models and the product change.

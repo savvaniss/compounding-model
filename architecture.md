@@ -52,7 +52,7 @@ sequenceDiagram
   A->>G: PR — ticket in branch + title
   G-->>A: findings: secrets/SAST/SCA/IaC + LLM review — file:line · why · fix
   A->>G: fix & push (gate re-runs) — or a human: /gate override: reason
-  G->>P: merge → build once (tag = release; image scanned, SBOM, signed)
+  G->>P: merge → build once (tag = release, image scanned, SBOM, signed)
   P->>P: guards: tag exists? build reason ≠ CI? approval check present?
   P->>E: deploy + migrations
   P->>E: verify — rollout converged AND endpoint answers
@@ -75,11 +75,11 @@ flowchart LR
 | # | utility | scope (what it does) | out of scope | size |
 |---|---|---|---|---|
 | 1 | **AI merge gate** | deterministic checks (ticket, branch, secret scan) + full-diff LLM review; PR thread + commit status; override on the record, scoped per push; run telemetry | auto-fixing code; replacing human review of design | M |
-| 2 | **Tool server (MCP)** | team ops as tools: deliver, deploy, PR, ticket search/read/comment, wiki-of-record search/read, runbook fetch, telemetry query — one federated search across all of it; per-person token auth; guard rules from `enforcement/` | being a general chat bot; storing secrets; mirroring the wiki | M–L |
+| 2 | **Tool server (MCP)** | team ops as tools: deliver, deploy, PR, ticket search/read/comment (create only on explicit human ask), wiki-of-record search/read (write human-asked, version-checked), runbook fetch, telemetry query — one federated search across all of it; per-person token auth; guard rules from `enforcement/` | being a general chat bot; storing secrets; mirroring the wiki | M–L |
 | 3 | **Change-delivery orchestrator** | one call: build → layered build → deploy → migrate → verify → report on ticket; refuses production (queue-only) | approving production; schema design | M |
 | 4 | **Pipeline guard library** | tag-exists, build-reason, approval-check-present, promotion-ancestry checks, shared by all queuing paths | replacing branch policies | S |
 | 5 | **Console / hub** | env status + sleep/wake, delivery metrics, cost view (fold `MC_*`), people view, usage panel (busy/quiet/can't-tell), runbook browser, assistant | BI platform; long-term warehouse | L |
-| 6 | **Cost ledger + rate table** | per-call attribution rows; effective-dated per-1M prices; read-time pricing; unpriced-model detection with as-billed names | invoicing; provider rate negotiation | M |
+| 6 | **Cost ledger + rate table** | per-call attribution rows carrying the ticket/feature id; effective-dated per-1M prices; read-time pricing; unpriced-model detection with as-billed names | invoicing; provider rate negotiation | M |
 | 7 | **LLM judge + eval harness** | sampled groundedness/coverage verdicts; NOT-GRADEABLE honesty; harness: golden tasks × candidate models, quality scores + cost per candidate | fine-tuning; human eval program | M |
 | 8 | **Usage sweep + activity table** | parse app logs → attributed action rows every ~2 min into persistent store; feature parsers added per log line | client-side analytics SDKs | S |
 | 9 | **Docs guard + registry check** | size cap per runbook, credential-shape scan, registry-row-in-same-commit check | grammar/style enforcement | S |

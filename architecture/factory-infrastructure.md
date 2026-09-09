@@ -19,8 +19,8 @@ flowchart TB
   end
   subgraph FSPOKE["Factory spoke (management boundary)"]
     ING[WAF ingress<br/>identity-aware, the only public entry]
-    RT[Container runtime<br/>tool server · console · sweeps]
-    FDB[(Managed Postgres<br/>activity · cost · findings)]
+    RT[Container runtime<br/>tool server · console · judge · sweeps]
+    FDB[(Managed Postgres<br/>activity · cost · verdicts · findings)]
     KV[(Secrets vault)]
     ACR[(Container registry)]
     AIF[(AI endpoints — build quota<br/>gate · judge · agents)]
@@ -50,8 +50,8 @@ endpoints and queries, not through network adjacency.
 |---|---|---|---|---|---|
 | 1 | AI merge gate | pipeline job on CI runners — no standing infra | pipeline's federated identity | none | verdicts → factory DB |
 | 2 | Tool server (MCP) | container app in the factory spoke | workload identity; callers: per-person signed tokens | via WAF ingress, identity-aware; private path from VPN | none of its own — reads vault, writes activity rows |
-| 3 | Change-delivery orchestrator | pipeline definition + guard steps | pipeline federated identity | none | run reports → tickets |
-| 4 | Guard library | inside pipelines | — | none | — |
+| 3 | Change-delivery orchestrator | pipeline definition, guarded at the queuing tool layer | pipeline federated identity | none | run reports → tickets |
+| 4 | Guard library | the queuing tool layer (MCP/CLI); pipelines carry the same checks as backstops | — | none | — |
 | 5 | Console / hub (web) | container app in the factory spoke | workload identity; users via workforce SSO on the ingress | via WAF ingress, SSO-gated — **never anonymous** | reads factory DB, cost APIs |
 | 6 | Cost ledger + rate table | tables in factory Postgres; writers are the product apps' telemetry path | product workload identities, insert-only | private endpoint only | factory DB |
 | 7 | Judge + eval harness | jobs on the factory runtime | workload identity | none | verdicts → factory DB |
@@ -90,8 +90,9 @@ endpoints and queries, not through network adjacency.
   **closed** — they are cheap and local. The LLM review fails **open with a
   loud degraded verdict** on the PR: an unavailable reviewer must not block
   all delivery, but it must never fail silently as "passed".
-- **Tool server down:** agents lose their hands, humans keep theirs —
-  pipelines and consoles still work directly; the watchdog (#11) alerts
+- **Tool server down:** agents lose their hands; humans fall back to the
+  CLI wrapper, which carries the same guards — raw pipeline access during
+  the outage is emergency-only and audited; the watchdog (#11) alerts
   within the day, and the outage is an incident like any other.
 - **Factory DB down:** product runtime is unaffected by design (telemetry
   writers buffer or drop, never block the request path); dashboards show

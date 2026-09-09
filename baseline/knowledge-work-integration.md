@@ -49,11 +49,11 @@ Rules that keep it honest:
 
 ## The mapping
 
-| concept | Atlassian | Microsoft | GitHub |
-|---|---|---|---|
-| work tracker | Jira | Azure Boards | Issues/Projects |
-| documentation of record | Confluence | SharePoint / ADO wiki | wiki / pages |
-| integration surface | REST + webhooks | REST + service hooks | REST + GraphQL |
+| concept | Atlassian | Microsoft | GitHub | GitLab |
+|---|---|---|---|---|
+| work tracker | Jira | Azure Boards | Issues/Projects | Issues/Epics |
+| documentation of record | Confluence | SharePoint / ADO wiki | wiki / pages | wiki / Pages |
+| integration surface | REST + webhooks | REST + service hooks | REST + GraphQL | REST + GraphQL |
 
 The invariants never change with the vendor: live read, federated search,
 attributed comments, ticket-traceability enforced at the gate, no

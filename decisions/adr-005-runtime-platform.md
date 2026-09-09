@@ -8,8 +8,10 @@ expensive to run well; serverless containers are cheap and constraining.
 
 ## Options considered
 - **VMs** — you inherit patching, scaling and orchestration. Rejected.
-- **Serverless containers** (Azure Container Apps, Google Cloud Run, AWS
-  App Runner/Fargate) — managed, minimal ops surface, scale to zero.
+- **Serverless containers** (Azure Container Apps, Google Cloud Run; on
+  AWS, App Runner/Fargate with the caveat that neither truly scales to
+  zero — App Runner pauses to a billed idle state) — managed, minimal ops
+  surface.
 - **Managed Kubernetes** (AKS / EKS / GKE) — full power: sidecars,
   operators, custom networking, Helm.
 

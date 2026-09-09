@@ -1,4 +1,4 @@
-# Evidence — Stage 2, Systematic
+# Evidence — Stage 2 (Systematic)
 
 **Systematic means AI is a team practice**: named accounts, shared and
 owned assets, champions with time, spend visible, AI output consciously
@@ -20,4 +20,5 @@ sensitive, a substantive written account replaces the screenshot.
 | Does capability compound? | repo of prompts/rules/runbooks with owners and recent commit dates | the shared repo itself |
 | Who carries it? | filled champions table (../templates/ai-champions.md) with recent activities | team roster |
 
-Update the self-assessment quarterly or the validation expires.
+Re-run the [AI assessment](../assessment/ai-assessment-prompt.md)
+quarterly or the validation expires.

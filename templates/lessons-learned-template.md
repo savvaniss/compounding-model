@@ -18,7 +18,7 @@ Checkable rules, not aspirations — each verifiable with a command or a gate.
 
 # Lesson: a deploy referenced a tag no image carried
 
-**Date:** _(engagement)_ · **Cost:** one production incident — old pods kept
+**Date:** _(redacted)_ · **Cost:** one production incident — old pods kept
 serving while the rollout silently failed to pull.
 
 ### What happened

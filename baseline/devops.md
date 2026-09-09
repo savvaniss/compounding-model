@@ -2,9 +2,9 @@
 
 The practices below are engine-neutral invariants; the
 [mapping table](#the-mapping) translates them to Azure DevOps, GitHub,
-GitLab, AWS and GCP. The guards are implementable everywhere because they
-live in the **tool layer that queues the pipelines**, not inside any
-engine.
+GitLab, AWS and GCP. The guards are implementable everywhere because their
+home is the **tool layer that queues the pipelines** — pipelines carry
+the same checks only as backstops, never as the sole enforcement.
 
 ## Environments & branching
 - Environment branches (`dev`, `stg`/`sbx`) deploy to their cluster on
@@ -56,7 +56,7 @@ and guards apply, with revisions in place of charts.
 | blocking PR gate | build-validation policy + PR status | required status checks | merge checks (pipeline must succeed) | PR build + required check on the host | build trigger + required check on the host |
 | human approval into prod | environment approval check | environment required reviewers | protected environment / manual job | manual approval action | Cloud Deploy approval |
 | merge automation | auto-complete | auto-merge | merge-when-pipeline-succeeds | via host | via host |
-| pipeline → cloud identity | workload identity federation (OIDC) | OIDC to cloud roles | OIDC to cloud roles | OIDC to IAM roles | Workload Identity Federation |
+| pipeline → cloud identity | workload identity federation (OIDC) | OIDC to cloud roles | OIDC to cloud roles | native IAM service role on CodeBuild | Cloud Build service account |
 | pipeline secret transport (fed from the vault) | secure files + variable groups | encrypted secrets + environments | protected/masked CI variables | Secrets Manager in CodeBuild | Secret Manager in Cloud Build |
 | artifact/container registry | Azure Artifacts + ACR | Packages + GHCR | GitLab registry | CodeArtifact + ECR | Artifact Registry |
 

@@ -32,6 +32,6 @@ tested like any other decision logic.
 
 ## Customer identity (if the product has end users)
 Federated SSO to the customer's IdP; the app stores the minimum (subject,
-mail, display name) and enriches at sign-in via token claims first, Graph
-delegated second, tenant-wide permissions only with admin consent — the
+mail, display name) and enriches at sign-in via token claims first, the directory's delegated
+per-user API second, org-wide permissions only with admin consent — the
 consent letter is a project task, not an afterthought.

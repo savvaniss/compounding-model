@@ -21,7 +21,7 @@ AI that *builds* the product (gate, agents, judge) never shares TPM quota
 with the AI *in* the product — quotas are regional and finite, and a noisy
 build agent must not starve a customer feature (nor vice versa). **Cost
 ledger**: every call writes an attribution row (person/service, model,
-tokens); prices are effective-dated per model *as billed* — a model whose
+tokens, and the ticket/feature id when the call served one); prices are effective-dated per model *as billed* — a model whose
 billed name has no price row is an alert, not a silent zero. **Eval-gated
 change**: no model added, swapped or upgraded in product paths without a run
 of the evaluation harness (../baseline/ai-standards.md) — golden tasks, judge

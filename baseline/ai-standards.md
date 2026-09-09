@@ -10,7 +10,10 @@ for — build it as a by-product, not a report.
 
 ## Cost (governance dimension)
 - Every LLM call persists: user, model **requested vs actually served**,
-  input/cached/output/reasoning tokens, latency, retries, error.
+  input/cached/output/reasoning tokens, latency, retries, error — and the
+  **ticket/feature id** where the call served one, which is what makes
+  "what did this feature cost" a query (the memory join of
+  knowledge-work-integration.md).
 - Prices live in an **effective-dated rate table** (per-1M-token, the unit
   providers quote). Cost is computed at read time, never stored — correcting
   a rate re-prices history. Providers may bill under **dated deployment names** (Azure does);
@@ -39,9 +42,10 @@ product. Model TPM quotas are regional and finite: check the quota table
 before creating deployments; a second account in the same region gets zero
 capacity if the first consumed the allocation.
 
-## Provider traps (all observed live)
-Anthropic models on an Azure AI gateway are served only by the native
-messages route — OpenAI-style routes 404. Gateways under throttle can return
+## Provider traps — a field guide
+Some vendors' models behind a cloud AI gateway answer only their native
+API route — the gateway's OpenAI-style route 404s (seen with
+Anthropic-style models; test both routes before wiring). Gateways under throttle can return
 transient 404s for deployments that exist — classify them retryable. Duplicate
 model-name enums across packages will meet in one LangChain sequence and
 refuse the whole chain — one enum, imported everywhere.

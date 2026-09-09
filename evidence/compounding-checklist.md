@@ -1,4 +1,4 @@
-# Evidence — Stage 3, Compounding
+# Evidence — Stage 3 (Compounding)
 
 **Compounding means AI is part of the operating model, and every use makes
 the next one better**: agents act with per-person identity, cost is

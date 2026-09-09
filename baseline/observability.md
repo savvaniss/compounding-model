@@ -21,8 +21,9 @@ an all-clear on a decision to stop production.
   You can only surface what the application emits — verify with a grep, not
   an assumption.
 - Directory enrichment (country/department/title) rides the existing SSO
-  federation: optional ID-token claims first (config only), delegated
-  Graph /me second, tenant-wide Graph permissions only with admin consent.
+  federation: optional ID-token claims first (config only), then the
+  directory's delegated per-user API (e.g. Microsoft Graph /me on Entra),
+  and org-wide directory permissions only with admin consent.
   Validate what is actually populated per country before promising fields —
   affiliates record different attributes in different places. Report
   **aggregate-first**: per-person location tracking is a legal conversation,

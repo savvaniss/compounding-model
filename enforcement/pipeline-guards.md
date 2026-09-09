@@ -1,7 +1,8 @@
 # Pipeline guards — refusals, not conventions
 
 Implemented in the tool layer (MCP/CLI wrapper) that queues pipelines, so
-every caller — human or agent — hits them.
+every caller — human or agent — hits them; pipelines repeat the cheap
+checks as backstops for anything that reaches them another way.
 
 1. **Tag-exists guard**: a deploy is refused if its image tag is not in the
    registry; the refusal names the newest tags that do exist. (Read the tag

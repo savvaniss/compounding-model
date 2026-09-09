@@ -14,7 +14,7 @@ structure is archaeology.
 ## Decision
 The required-tags policy (ADR-001) makes every resource attributable;
 environment cost folds managed-cluster (`MC_*`) groups into their
-environment. Budgets with alerts **and a named owner** per subscription.
+environment. Budgets with alerts **and a named owner** per isolation boundary.
 **Non-prod sleeps**: dev/stage compute stops on schedule (nights/weekends)
 via pipeline, wake on demand. Registry and storage get retention policies
 before they get big (an untagged image purge on a 1TB registry is a

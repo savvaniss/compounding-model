@@ -1,4 +1,4 @@
-# Roadmap: four weeks to a Stage 3 (compounding) delivery system
+# Roadmap: four weeks to a Stage 3 (Compounding) delivery system
 
 **Agent: this roadmap is yours to execute**, the way you executed the
 quick start — you provision the infrastructure, build the utilities and

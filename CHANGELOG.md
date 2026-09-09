@@ -2,6 +2,11 @@
 
 ## 1.2.0 — 2026-09-09
 
+- **Everything is code — no manual actions** (CLAUDE.md,
+  baseline/terraform.md, working agreement): agents never change
+  infrastructure, pipelines or policies by hand; the bootstrap set and
+  recorded hard-platform-limit exceptions are the only hand-made surface;
+  emergency changes land in code within 24h.
 - **Knowledge & work integration** (baseline/knowledge-work-integration.md
   + ADR-015): the wiki of record and the work tracker are live tools on
   the one MCP socket — federated search, attributed comments, read-before-

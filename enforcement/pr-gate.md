@@ -16,7 +16,7 @@ mapping). Deterministic checks first, then an LLM review of the full diff.
 Every finding: **file:line · why it matters · the fix**. Blocking findings
 separated from advisory notes. Posted as a PR thread AND a commit status; the
 status is what merge automation (auto-complete / auto-merge) reads. Every run telemetered (outcome, tokens,
-files reviewed) — precedence blocked > overridden > degraded > passed.
+files reviewed, ticket) — precedence blocked > overridden > degraded > passed.
 
 ## Override — a decision on the record
 `/gate override: <reason ≥ one sentence>` in the PR thread by a listed team

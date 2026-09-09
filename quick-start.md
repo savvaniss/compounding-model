@@ -31,9 +31,11 @@ those decisions belong to the humans.
    inventory every `.env`, pipeline variable and wiki page holding a
    credential; move them to the vault (the only home) and delete the
    copies. 🧑 Rotation approval for anything that was exposed.
-6. **Create the team's factory repo** (🧑 confirm org, name, visibility —
-   `--template savvaniss/compounding-model` seeds it) with `REGISTRY.md`
-   at its root; from this moment register every asset you create in the
+6. **Create the team's factory repo** (🧑 confirm org, name, visibility).
+   Seed it from this repository — on GitHub `--template
+   savvaniss/compounding-model`; on any other host, clone and re-init —
+   and copy `templates/REGISTRY.md` to the new repo's root as its first
+   commit. From this moment register every asset you create in the
    creating commit — including the assets from steps 7–10.
 7. **Post the [working agreement](enforcement/working-agreement.md)** for
    signature. 🧑 Humans sign; you operate under it from now on.
@@ -45,9 +47,11 @@ those decisions belong to the humans.
    what you can observe (current latencies, traffic, data classes) —
    never leave a row "TBD". 🧑 The team confirms or amends the numbers.
 10. **Run the [AI assessment](assessment/ai-assessment-prompt.md)** against
-    the organization's real repos and pipelines; present the verdict table,
-    and file every weak answer as a ticket mapped to the
-    [roadmap](roadmap.md).
+    the organization's real repos and pipelines and present the verdict
+    table. 🧑 The team decides which weak answers become tickets — you
+    propose them mapped to the [roadmap](roadmap.md) and file only the
+    approved ones (you never open a ticket unasked; this approval is the
+    ask).
 
 Day one ends here. **Your next assignment is building the factory
 itself**: provision its spoke from

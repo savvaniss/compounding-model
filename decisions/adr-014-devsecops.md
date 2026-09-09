@@ -22,7 +22,7 @@ pinned OSS alternates — the full table lives in
 [security/secure-delivery.md](../security/secure-delivery.md). All findings
 flow into **one ledger** (utility #13) with severity SLAs owned by the
 service owner; suppressions carry a reason, an owner and an expiry.
-Runtime: posture management on every subscription, a SIEM with few
+Runtime: posture management on every isolation boundary, a SIEM with few
 high-signal detections, weekly base-image rebuilds, scheduled key rotation
 ([security/security-operations.md](../security/security-operations.md)).
 

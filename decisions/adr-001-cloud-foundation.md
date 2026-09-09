@@ -22,8 +22,9 @@ or folders). One isolation boundary (subscription, account or project) per
 workload **and** environment (dev, stage, prod). Policy assigned at
 hierarchy level as code: allowed regions, required tags
 (`workload`, `environment`, `owner`, `cost-center`), deny public storage/DB
-endpoints, DeployIfNotExists for diagnostics and backup. CAF naming
-convention (`rg-<workload>-<env>-<seq>`) enforced by policy, not convention.
+endpoints, auto-remediation for diagnostics and backup. The chosen
+cloud's published naming scheme enforced by policy, not discipline (on
+Azure, CAF's `rg-<workload>-<env>-<seq>`).
 
 ## Consequences
 Easier: cost per environment is a boundary filter; prod policy can be

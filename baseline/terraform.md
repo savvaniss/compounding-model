@@ -1,10 +1,11 @@
 # Terraform standards — verified modules first
 
 ## Modules
-- **Prefer the cloud's verified module ecosystem** from the Terraform
-  Registry: Azure Verified Modules (`Azure/avm-res-<provider>-<resource>`),
-  the `terraform-aws-modules` collection / AWS-IA modules, Google's Cloud
-  Foundation Fabric. They carry maintained, well-architected defaults and
+- **Prefer the cloud's verified module ecosystem**: Azure Verified Modules
+  (`Azure/avm-res-<provider>-<resource>`) and the `terraform-aws-modules`
+  collection / AWS-IA modules from the Terraform Registry; on GCP, the
+  registry-published `terraform-google-modules` (Cloud Foundation
+  Toolkit), or Cloud Foundation Fabric vendored from GitHub. They carry maintained, well-architected defaults and
   standard interfaces (diagnostics, locks, IAM, private endpoints). Only
   write a custom module when no verified module covers the resource or a
   hard requirement conflicts with its interface.
