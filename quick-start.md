@@ -60,5 +60,5 @@ as IaC through the pipeline, then build the thirteen utilities of
 [architecture.md](architecture.md) in numbered order — the enforcement
 spine (gate, tool server, orchestrator, guard library) first, each
 landing as a gated PR with its registry row. The
-[four-week roadmap](roadmap.md) sequences it; execute it the same way you
+[roadmap](roadmap.md) sequences it; execute it the same way you
 executed today — through the gate you just built.

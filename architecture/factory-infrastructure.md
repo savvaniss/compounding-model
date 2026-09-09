@@ -102,7 +102,7 @@ endpoints and queries, not through network adjacency.
   reviewed with capacity (../operations/sre.md).
 
 Bootstrap note: the factory spoke arrives as the factory's first gated
-delivery (roadmap week 2); until it lands, the week-1 gate and pipelines
+delivery (roadmap phase 2); until it lands, the phase-1 gate and pipelines
 run on CI runners against an interim model endpoint, with plain branch
 policies as the backstop — from then on the factory ships itself through
 its own gates.

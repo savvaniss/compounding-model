@@ -126,7 +126,8 @@ You don't work through it — your agent does. What you watch happen:
    serves back to the team.
 8. **It keeps the evidence green** ([evidence/](evidence/)) so validation is
    an export, not an archaeology project — the [roadmap](roadmap.md)
-   sequences all of this into four weeks.
+   sequences all of this by dependency — the agent builds in hours; the
+   calendar belongs to decisions, lead times and evidence.
 
 ## The invariants
 

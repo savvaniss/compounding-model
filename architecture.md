@@ -88,9 +88,11 @@ flowchart LR
 | 12 | **Directory enrichment** | at-sign-in claims/`/me` capture → user attributes (country, department); aggregate-first reporting | tenant-wide scraping without consent | S–M |
 | 13 | **Security findings ledger** | one queue from all scanners (SAST/SCA/IaC/image/DAST/posture); severity SLAs per owner; suppressions with expiry; release-delta report | being a SIEM; fixing findings itself | S–M |
 
-Sizes: S ≈ days, M ≈ 1–2 weeks, L ≈ 3+ weeks, one experienced builder with an
-AI agent. Order of build = the numbering; 1–4 are the enforcement spine and
-come first (see [roadmap.md](roadmap.md)).
+Sizes measure complexity and review surface, not typing: with an agent
+building, S ≈ an hour or two, M ≈ a working session plus review rounds,
+L ≈ a few sessions — the calendar cost is gate reviews and human
+decisions, not construction. Order of build = the numbering; 1–4 are the
+enforcement spine and come first (see [roadmap.md](roadmap.md)).
 
 Where each utility physically runs — the factory as a spoke in the hub-spoke
 topology, with identity, exposure and failure design per component — is in
