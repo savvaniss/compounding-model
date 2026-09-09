@@ -23,5 +23,6 @@ ADR with your context, not by silently diverging.
 | [013](adr-013-cost-management.md) | Cost management | tagging standard; budgets with owners; unit economics; non-prod sleeps |
 | [014](adr-014-devsecops.md) | DevSecOps | scan lane in the pipeline; one findings ledger; SLAs per owner; suppressions expire |
 | [015](adr-015-knowledge-work-integration.md) | Knowledge & work | wiki + tracker as live tools; ticket = unit of work; agents never open tickets unasked |
+| [016](adr-016-data-analytics.md) | Data & analytics | managed lakehouse; notebooks are code through the gate; catalog + freshness SLOs mandatory |
 
 Format for new/superseding ADRs: [templates/adr-template.md](../templates/adr-template.md).

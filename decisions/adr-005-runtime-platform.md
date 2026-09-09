@@ -25,6 +25,28 @@ deploy **only** through the package manager (Helm) and pipeline — never
 breaks the next upgrade); requests/limits and autoscaler targets are one
 joint decision; non-prod clusters sleep on schedule (ADR-013).
 
+## When a VM is unavoidable
+
+Vendor appliances, GPU hosts, Windows/AD-bound workloads and lift-and-shift
+estates exist. They do not escape the invariants — they get VM-shaped
+versions of them:
+
+- **Golden images, not hand-built servers**: images are baked by a pipeline
+  (shared image gallery / AMI / machine image), versioned, scanned, and
+  rebuilt on a schedule so patch inheritance happens.
+- **In-guest state is code**: cloud-init / Ansible / DSC applied at boot;
+  the IaC drift check cannot see inside the guest, so config management IS
+  the drift control there. A hand-fixed server is rebuilt from image, not
+  kept — cattle, not pets.
+- **Patching in rings** via the cloud's patch manager (Update Manager /
+  SSM Patch Manager / OS Config), same severity SLAs as
+  security-operations.
+- **No standing SSH/RDP**: bastion + just-in-time access only; Windows
+  services use managed identities/gMSA, never stored passwords.
+- Backup agents, monitoring agents and deletion locks like any stateful
+  resource; non-production VMs sleep on the same schedule as everything
+  else.
+
 ## Consequences
 Easier: the small team spends its ops budget on the product, not the
 platform. Harder: the serverless→Kubernetes move is real work if triggered late — revisit

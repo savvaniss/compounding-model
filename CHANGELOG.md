@@ -1,5 +1,24 @@
 # Changelog
 
+## 1.3.0 — 2026-09-09
+
+- **Roadmap recalibrated to agent execution**: five dependency-ordered
+  phases; the bulk build is hours of agent work, the calendar belongs to
+  human decisions, cloud lead times and evidence accumulation.
+- **VM coverage** (ADR-005 annex): golden-image pipelines, in-guest
+  config as code (the drift control terraform cannot see), patch rings,
+  JIT-only access, cattle-not-pets rebuilds — for the estates where a VM
+  is unavoidable.
+- **Data & analytics** (baseline/data-analytics.md + ADR-016): managed
+  lakehouse per cloud; notebooks are code through the gate; mandatory
+  catalog with classification and lineage; data tests gate layer
+  promotion; freshness SLOs render "stale since", never silently old
+  numbers; clusters auto-terminate and join the unit-economics review.
+  New NFR row for data freshness & quality.
+- Second deep-audit pass: 25 verified corrections (diagram parse fix,
+  ticket-approval stop in the quick start, guard-placement alignment,
+  ticket/feature id through the cost ledger, residual vendor terms).
+
 ## 1.2.0 — 2026-09-09
 
 - **Everything is code — no manual actions** (CLAUDE.md,
