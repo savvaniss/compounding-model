@@ -71,7 +71,7 @@ flowchart LR
   M -->|guides| OPS["Operations & the monitoring map<br/><i>operations/</i>"]
   M -->|enforces| DEL["Delivery & quality gates<br/><i>baseline/devops · enforcement/</i>"]
   M -->|enforces| SEC["DevSecOps & security operations<br/><i>security/</i>"]
-  M -->|enforces| FAC["The AI factory & agent identity<br/><i>baseline/factory · ai-standards</i>"]
+  M -->|enforces| FAC["The AI factory & agentic platform<br/><i>baseline/factory · agentic-platform</i>"]
   M -->|enforces| EVD["Evidence per stage<br/><i>evidence/</i>"]
 ```
 
@@ -94,7 +94,7 @@ flowchart LR
 ## Navigate by role
 
 - **Sponsor / product owner** — [solution/business-to-solution.md](solution/business-to-solution.md), then the monitoring map's top row.
-- **Architect** — [decisions/](decisions/) (the seeded ADR baseline), [architecture/practice.md](architecture/practice.md), [solution/nfr-catalogue.md](solution/nfr-catalogue.md), [architecture.md](architecture.md) (system diagrams + the thirteen utilities).
+- **Architect** — [decisions/](decisions/) (the seeded ADR baseline), [architecture/practice.md](architecture/practice.md), [baseline/agentic-platform.md](baseline/agentic-platform.md) (the adopt-vs-keep control-plane calls), [solution/nfr-catalogue.md](solution/nfr-catalogue.md), [architecture.md](architecture.md) (system diagrams + the thirteen utilities).
 - **Platform / DevOps engineer** — [roadmap.md](roadmap.md), [baseline/](baseline/), [enforcement/](enforcement/).
 - **Security lead** — [security/secure-delivery.md](security/secure-delivery.md), [security/security-operations.md](security/security-operations.md), [baseline/identity.md](baseline/identity.md).
 - **Engineering / delivery lead** — [baseline/development.md](baseline/development.md), [baseline/quality.md](baseline/quality.md), [operations/sre.md](operations/sre.md), [evidence/](evidence/).
