@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.4.1 — 2026-09-21
+
+- **ADR-017 addendum — first applications.** Two capabilities crossed the
+  adopt/keep/hybrid framework in practice and the outcomes are recorded:
+  knowledge retrieval adopted the governed mirror (hybrid keyword + vector
+  + semantic index, refreshed by the same merge automation that changes
+  the sources — the live-read keep is retired for retrieval, kept only
+  where no such automation exists); the hosted agent runtime landed as
+  hybrid (assistant-class agents hosted for control-plane inventory,
+  traces, evaluators and workload identity; pipeline-embedded agents stay
+  custom). Field findings included: hosted runtimes with model-channel
+  and sampling-parameter gaps, grounding connectors that refuse read-only
+  keys (workload identity only), hosted models inventing citations unless
+  the first retrieval call is forced, and per-run credential passthrough
+  as the way person-attribution survives hosting.
+
 ## 1.4.0 — 2026-09-20
 
 - **The agentic platform** (baseline/agentic-platform.md + ADR-017): the
