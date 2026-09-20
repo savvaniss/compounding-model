@@ -1,5 +1,30 @@
 # Changelog
 
+## 1.4.0 — 2026-09-20
+
+- **The agentic platform** (baseline/agentic-platform.md + ADR-017): the
+  invariants gathered against the platforms' new agent control planes —
+  agent identity, fleet registry, runtime, evaluations, guardrails,
+  observability, knowledge, workplace and code-assistant surfaces — each
+  with Microsoft / AWS / GCP mappings, and a decision framework: adopt
+  native where it meets the invariant, keep custom where it exceeds it,
+  every call an ADR, never drift. Includes the one-socket dividend (an
+  MCP-governed estate is adoptable by registration, not re-architecture)
+  and the A2A documented-not-adopted position.
+- **Two identity classes, one attribution rule**: interactive agents act
+  as the person driving them; standing agents are registered workload
+  identities with named owners — refined through identity.md, ADR-003,
+  cloud-foundation and ai-standards.
+- **Evaluation invariants named**: continuous evaluation at a declared
+  sampling rate; acceptance thresholds gating releases; native evaluator
+  suites may run alongside the judge under the honesty clause.
+- **Runtime guardrails named**: prompt-injection shields at the model
+  gateway as a control with findings in the ledger; AI-workload threat
+  detection added to security operations posture.
+- Knowledge "read live" rule gains its boundary case (an index is a
+  mirror with an owner and a freshness SLO); AI telemetry pinned to the
+  OpenTelemetry GenAI semantic conventions.
+
 ## 1.3.0 — 2026-09-09
 
 - **Roadmap recalibrated to agent execution**: five dependency-ordered

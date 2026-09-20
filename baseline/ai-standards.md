@@ -3,8 +3,10 @@
 AI is infrastructure with its own contracts, not a feature bolted on.
 
 ## Identity
-Per-person signed short-lived tokens for every agent; unattributed writes
-refused; every tool call telemetered per person into a queryable table. The
+Per-person signed short-lived tokens for every interactive agent; standing
+agents (gate, judge, orchestrator, assistant) run as registered workload
+identities with named owners (ADR-017); unattributed writes refused; every
+tool call telemetered per person into a queryable table. The
 "who did what through the AI" view is the adoption evidence validators ask
 for — build it as a by-product, not a report.
 
@@ -24,13 +26,21 @@ for — build it as a by-product, not a report.
 
 ## Quality — the evaluation loop
 - LLM-as-judge scores generations (groundedness, coverage — pick the axes
-  that match *your* workload) on a sample of real traffic.
+  that match *your* workload) continuously, at a **declared sampling
+  rate**, on real traffic.
 - A **model evaluation harness** runs on demand: a golden set of tasks
   representative of your workload, executed by every candidate model, scored
   by the judge, with **cost shown next to quality per candidate** — quality
   per euro is the real decision. Re-run it before every model swap or
   provider migration; the harness is what turns "the new model feels fine"
-  into evidence.
+  into evidence. The platform's native evaluator suite may run alongside
+  the judge for ecosystem-comparable numbers — with the honesty clause: a
+  grader that cannot answer "can't grade" never fully replaces one that
+  can.
+- **Acceptance thresholds gate releases**: a model or agent change ships
+  only when the harness clears a floor set in advance (groundedness /
+  task-adherence pass rate), versioned with the config and attached to
+  the PR.
 - The judge **never scores its own generator**, stamps its prompt version on
   every verdict, and when retrieval returns nothing answers **NOT
   GRADEABLE — a retrieval problem, not a model result** instead of inventing

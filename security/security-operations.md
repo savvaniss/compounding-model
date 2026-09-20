@@ -6,7 +6,9 @@ review. Small teams don't get to skip this — they get to automate it.
 
 ## Posture management (know your surface)
 Cloud-native posture management (Defender for Cloud / AWS Security Hub +
-GuardDuty / Security Command Center) enabled on every isolation boundary, with the secure score reviewed monthly and
+GuardDuty / Security Command Center) enabled on every isolation boundary,
+with **AI-workload threat detection on every model endpoint and agent
+service** (Defender for AI-class) under the same day-0 rule, with the secure score reviewed monthly and
 regressions treated as bugs. The deny/auto-remediate policies from the foundation
 (ADR-001) are the preventive layer; posture management is the detective
 layer that catches what policy could not express.

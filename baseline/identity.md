@@ -18,12 +18,17 @@ no long-lived secrets in pipelines · service-to-service auth explicit, never
 "internal network = trusted" · every credential's home is the vault, scanned
 for at every commit.
 
-## Agents (the new class)
-AI agents hold **no standing identity of their own**: they act as the person
-driving them, via short-lived signed tokens; unattributed writes are refused
-at the tool boundary; every call is telemetered per person. Production is
-queue-only for agents — a named human lands it. This one design choice makes
-AI adoption auditable, measurable (DAU per person), and safe to scale.
+## Agents (the new class) — two identity classes, one attribution rule
+**Interactive agents** (a person is driving) hold no identity of their own:
+they act as the person, via short-lived signed tokens; unattributed writes
+are refused at the tool boundary; every call is telemetered per person.
+**Standing agents** (the factory's long-running workloads — gate, judge,
+orchestrator, assistant) are registered workload identities with a named
+owner and lifecycle — platform agent-identity where the cloud offers it
+(baseline/agentic-platform.md). One rule covers both: every write traces to
+a human sponsor. Production is queue-only for all agents — a named human
+lands it. This design keeps AI adoption auditable, measurable (DAU per
+person), and safe to scale.
 
 ## Application authorization
 Resource-level checks on every mutating route (owner/role on the object,

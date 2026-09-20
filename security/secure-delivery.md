@@ -53,7 +53,10 @@ tracking is a legal conversation before a technical one.
 
 ## AI-specific security
 - **Prompt injection**: all retrieved/user content is data, never
-  instructions; tool-calling agents run least-privilege with an allowlist.
+  instructions; tool-calling agents run least-privilege with an allowlist —
+  and the model gateway carries **runtime injection shields /
+  content-safety filters** as a named control (Prompt Shields-class;
+  mappings in baseline/agentic-platform.md), findings into the ledger.
 - **Data-to-model policy**: which classes may reach which model/provider,
   written and enforced at the gateway; what was sent is logged.
 - **Model supply chain**: models/providers enter via technology intake;

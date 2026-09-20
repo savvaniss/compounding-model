@@ -24,7 +24,12 @@ Rules that keep it honest:
 - **One federated search** across all sources — the agent (and the human)
   asks once; each silo answering separately is how context gets missed.
 - **Read live, never mirror.** A copied wiki is stale the week after; the
-  tools fetch the page of record at ask time.
+  tools fetch the page of record at ask time. The boundary case: a search
+  index over the corpus is right when no factory serves it live, when the
+  corpus dwarfs any context window, or when search must span
+  organizations — and then it is **a mirror with a named owner and a
+  freshness SLO**, never an anonymous copy (the knowledge products in
+  baseline/agentic-platform.md fill this role).
 - **Read before acting** is contract, not courtesy: an agent starting a
   task searches the knowledge plane for prior decisions, related tickets
   and the relevant runbook first (CLAUDE.md).

@@ -41,8 +41,9 @@ translates each concept to Azure, AWS and GCP.
 - One **workload identity per environment** for pipelines, federated
   (OIDC), least privilege. Never a shared god-principal, never long-lived
   keys.
-- AI agents authenticate **as the person driving them** via short-lived
-  signed tokens; agent writes are refused without attribution.
+- Interactive AI agents authenticate **as the person driving them** via
+  short-lived signed tokens; standing agents are registered workload
+  identities (ADR-017); agent writes are refused without attribution.
 - Secrets live in the managed vault — the only home; pipelines and
   runtimes materialize from it at run time. A docs/CI gate scans every
   commit for credential-shaped strings.

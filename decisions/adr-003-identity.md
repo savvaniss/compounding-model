@@ -20,10 +20,14 @@ roles via just-in-time elevation (PIM or the cloud's equivalent) with
 time-boxed activation; joiner–mover–leaver handled by group
 membership; quarterly access review with evidence. Workloads: one federated
 (OIDC) identity per service per environment — no client secrets in
-pipelines, ever. AI agents: **no standing identity of their own** — they act
-as the driving person via short-lived signed tokens, unattributed writes are
-refused at the tool boundary, and production is queue-only for agents (a
-named human lands the change). Customers, if any: federated SSO; store the
+pipelines, ever. AI agents (two classes — refined by
+ADR-017): **interactive agents** hold no identity of their own — they act
+as the driving person via short-lived signed tokens, with unattributed
+writes refused at the tool boundary; **standing agents** are registered
+workload identities with a named owner, using the platform's
+agent-identity primitive where it exists. Both: production is queue-only
+for agents (a named human lands the change), and every write traces to a
+human sponsor. Customers, if any: federated SSO; store the
 minimum; tenant-wide directory permissions only with explicit admin consent.
 
 ## Consequences

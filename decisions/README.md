@@ -24,5 +24,6 @@ ADR with your context, not by silently diverging.
 | [014](adr-014-devsecops.md) | DevSecOps | scan lane in the pipeline; one findings ledger; SLAs per owner; suppressions expire |
 | [015](adr-015-knowledge-work-integration.md) | Knowledge & work | wiki + tracker as live tools; ticket = unit of work; agents never open tickets unasked |
 | [016](adr-016-data-analytics.md) | Data & analytics | managed lakehouse; notebooks are code through the gate; catalog + freshness SLOs mandatory |
+| [017](adr-017-agent-governance.md) | Agent governance | adopt native where it meets the invariant, keep custom where it exceeds it; two identity classes; A2A documented, not adopted |
 
 Format for new/superseding ADRs: [templates/adr-template.md](../templates/adr-template.md).

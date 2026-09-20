@@ -3,7 +3,8 @@
 ## Day 0 by policy
 Container, gateway and database logs flow to the central log store by
 auto-remediating policy (see baseline/cloud-foundation.md's mapping); OTel
-collector; 90-day retention; structured JSON app logs
+collector — AI calls emitted in the **OpenTelemetry GenAI semantic
+conventions**, so any control plane can read them; 90-day retention; structured JSON app logs
 where **every meaningful user action names the user** — the single logging
 rule that later makes usage analytics possible at all.
 
