@@ -12,7 +12,7 @@ part of the operating model, and every use makes the next one better).
 | # | Question | Stage 1 — Ad hoc | Stage 2 — Systematic | Stage 3 — Compounding |
 |---|---|---|---|---|
 | 1 | **Where does AI act?** | isolated coding tasks | most delivery stages (design, code, test, docs) | end-to-end workflows incl. operations — agents queue production changes, humans land them |
-| 2 | **Who does it act as?** | shared keys, anonymous output | named accounts per tool | per-person agent identity; unattributed writes refused at the tool boundary; every action auditable to a human |
+| 2 | **Who does it act as?** | shared keys, anonymous output | named accounts per tool | attributable agent identity: interactive agents act as their driver, standing agents carry a named owner; unattributed writes refused at the tool boundary; every action auditable to a human sponsor |
 | 3 | **What does it cost — is it worth it?** | unknown | spend visible per tool | every call attributed and priced from an effective-dated rate table; unit economics reviewed on cadence, and the review changes decisions |
 | 4 | **How good is its output?** | vibes | human spot-review of AI work | judged: sampled LLM-as-judge verdicts, an eval harness gating model swaps, honest "can't grade" over invented scores |
 | 5 | **Does capability compound?** | nothing persists between people | prompts, rules, runbooks shared in source control with owners | a factory: assets are code, shipped through their own gates; incidents become lessons the assistant serves back during work |

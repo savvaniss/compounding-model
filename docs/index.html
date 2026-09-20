@@ -104,9 +104,11 @@ production changes carrying a human approval).
 
 Q2 — Who does the AI act as? Inspect agent authentication: shared API
 keys or bot accounts → Stage 1; named accounts per tool → Stage 2;
-Stage 3 needs per-person identity on every agent action (short-lived
-personal tokens, attributed actions, a tool boundary that refuses
-anonymous writes — find the refusal path).
+Stage 3 needs every agent action attributable to a human sponsor:
+interactive agents on short-lived personal tokens (acting as their
+driver), standing agents as registered workload identities with named
+owners — and a tool boundary that refuses anonymous writes (find the
+refusal path).
 
 Q3 — What does it cost, and is it worth it? Look for a cost ledger:
 per-call attribution (who, model, tokens), a price table, dashboards.
@@ -141,7 +143,7 @@ inflation.</pre>
 <h2>What the agent hunts for</h2>
 <div class="qgrid">
   <div class="qcard"><b>Q1 · Where does AI act?</b><p>AI-reviewed PRs, generated tests, drafted docs, agent-driven ops — not just autocomplete.</p></div>
-  <div class="qcard"><b>Q2 · Who does it act as?</b><p>Per-person agent identity and a boundary that refuses anonymous writes. Shared keys score Stage 1.</p></div>
+  <div class="qcard"><b>Q2 · Who does it act as?</b><p>Every agent action attributable to a human sponsor — driver or named owner — and a boundary that refuses anonymous writes. Shared keys score Stage 1.</p></div>
   <div class="qcard"><b>Q3 · What does it cost?</b><p>An attributed cost ledger, a price table, and a review that provably changed a decision.</p></div>
   <div class="qcard"><b>Q4 · How good is its output?</b><p>Judge verdicts on real traffic, an eval harness gating model swaps, honest &ldquo;can&rsquo;t grade&rdquo;.</p></div>
   <div class="qcard"><b>Q5 · Does capability compound?</b><p>A factory: assets as code through their own gates, a registry, lessons with evidence.</p></div>

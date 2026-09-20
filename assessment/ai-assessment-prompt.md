@@ -37,9 +37,11 @@ production changes carrying a human approval.
 
 **Q2 — Who does the AI act as?**
 Inspect how agents authenticate: shared API keys or bot accounts → Stage 1.
-Named accounts per tool → Stage 2. Stage 3 needs per-person identity on
-every agent action (short-lived personal tokens, attributed commits/actions,
-a tool boundary that *refuses* anonymous writes — find the refusal path).
+Named accounts per tool → Stage 2. Stage 3 needs every agent action
+attributable to a human sponsor: interactive agents on short-lived personal
+tokens (acting as their driver), standing agents as registered workload
+identities with named owners — and a tool boundary that *refuses*
+anonymous writes (find the refusal path).
 
 **Q3 — What does it cost, and is it worth it?**
 Look for a cost ledger: per-call attribution (who, which model, tokens), a

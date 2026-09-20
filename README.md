@@ -45,7 +45,7 @@ prove** — maturity is a chain, not an average:
 | # | Question | Stage 1 — Ad hoc | Stage 2 — Systematic | Stage 3 — Compounding |
 |---|---|---|---|---|
 | 1 | Where does AI act? | isolated coding tasks | most delivery stages | end-to-end workflows incl. operations; agents queue prod, humans land it |
-| 2 | Who does it act as? | shared keys, anonymous | named accounts | per-person agent identity; unattributed writes refused |
+| 2 | Who does it act as? | shared keys, anonymous | named accounts | attributable agent identity — interactive agents act as their driver, standing agents carry a named owner; unattributed writes refused |
 | 3 | What does it cost — is it worth it? | unknown | spend visible per tool | every call attributed + priced; unit-economics reviews change decisions |
 | 4 | How good is its output? | vibes | human spot-review | judged: sampled verdicts, eval harness gating model swaps, honest "can't grade" |
 | 5 | Does capability compound? | nothing persists | shared assets with owners | a factory: assets as code through their own gates; lessons served back during work |
